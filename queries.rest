@@ -1,0 +1,37 @@
+POST http://localhost:8080/register HTTP/1.1
+content-type: application/json
+
+{
+    "nickname": "nickname",
+    "email": "a1@gmail.com",
+    "password": "password",
+    "confirmPassword": "password"
+}
+
+###
+
+POST http://localhost:8080/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "first@gmail.com",
+    "password": "password"
+}
+
+
+### 
+
+GET http://localhost:8080/ HTTP/1.1
+
+###
+
+POST http://localhost:8080/chatroom HTTP/1.1
+content-type: application/json
+
+{
+    "name": "someName"
+}
+
+###
+
+DELETE http://localhost:8080/logout HTTP/1.1
