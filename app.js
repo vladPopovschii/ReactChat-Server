@@ -10,6 +10,10 @@ const loginRouter = require("./routes/login");
 const dashboardRouter = require("./routes/dashboard");
 const chatroomRouter = require("./routes/chatroom");
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    next();
+});
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);
 app.use("/dashboard", dashboardRouter);

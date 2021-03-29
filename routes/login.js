@@ -2,7 +2,6 @@ const express = require("express");
 const User = require("../model/user");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const passport = require("passport");
 
 const router = express.Router();
 
@@ -21,7 +20,7 @@ router.post("/", async (req, res) => {
 
     let payload = {
         id: user.id,
-        nickname: user.nickname,
+        user,
     };
 
     jwt.sign(

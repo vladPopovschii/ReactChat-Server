@@ -5,6 +5,7 @@ const chatroomSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    members: {},
 });
 
 module.exports = mongoose.model("Chatroom", chatroomSchema);
